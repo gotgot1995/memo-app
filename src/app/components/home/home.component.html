@@ -1,74 +1,43 @@
-<main class="container-fluid">
-	<div class="row" style="margin-top: 20px">
-		<div class="col s12 m3 l2">
-			<div class="card z-depth-4">
-				<div class="card-image">
-					<img src="assets/sample-1.jpg">
-					<span class="card-title"><strong>14 septembre 2018</strong></span>
-					<a class="btn-floating halfway-fab waves-effect waves-light cyan darken-3"><i class="material-icons">add</i></a>
-				</div>
-				<div class="card-content">
-					<!-- Empty body -->
-				</div>
+<div class="container-fluid">
+	<!-- NAVBAR -->
+	<nav class="row">
+		<mz-navbar navbarClass="cyan lighten-1">
+			<div id="btn-sidenav-demo" style="cursor: pointer; margin-left: 10px;">
+				<i mz-icon [align]="'left'" [icon]="'menu'" [size]="'medium'"></i>
 			</div>
+			<a href="#" class="brand-logo">Logo</a>
+			<mz-navbar-item-container [align]="'right'">
+				<mz-navbar-item><a href="#">Sass</a></mz-navbar-item>
+				<mz-navbar-item><a href="#">Components</a></mz-navbar-item>
+				<mz-navbar-item><a routerLink="js">JavaScript</a></mz-navbar-item>
+			</mz-navbar-item-container>
+		</mz-navbar>
+	</nav>
+
+	<!-- CONTENT -->
+	<main class="row">
+		<div class="col">
+			<p>Du contenu...</p>
 		</div>
-		<div class="col s12 m3 l2">
-			<div class="card z-depth-4">
-				<div class="card-image">
-					<img src="assets/sample-1.jpg">
-					<span class="card-title"><strong>15 septembre 2018</strong></span>
-				</div>
-				<div class="card-content">
-					<h5>Une belle journée...</h5>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m3 l2">
-			<div class="card z-depth-4">
-				<div class="card-image">
-					<img src="assets/sample-1.jpg">
-					<span class="card-title"><strong>16 septembre 2018</strong></span>
-				</div>
-				<div class="card-content">
-					<h5>Un autre sujet</h5>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m3 l2">
-			<div class="card z-depth-4">
-				<div class="card-image">
-					<img src="assets/sample-1.jpg">
-					<span class="card-title">Card Title</span>
-					<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-				</div>
-				<div class="card-content">
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m3 l2">
-				<div class="card z-depth-4">
-					<div class="card-image">
-						<img src="assets/sample-1.jpg">
-						<span class="card-title">Card Title</span>
-						<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-					</div>
-					<div class="card-content">
-						<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col s12 m3 l2">
-					<div class="card z-depth-4">
-						<div class="card-image">
-							<img src="assets/sample-1.jpg">
-							<span class="card-title">Card Title</span>
-							<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-	</div>
-</main>
+	</main>
+
+	<!-- FOOTER -->
+</div>
+
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+	<mz-sidenav-header>
+		Menu principal
+	</mz-sidenav-header>
+	<mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
+	<mz-sidenav-link>
+		<a href="#">First Link</a>
+	</mz-sidenav-link>
+	<mz-sidenav-divider></mz-sidenav-divider>
+	<mz-sidenav-link [active]="true">
+		<a href="#">Active Link</a>
+	</mz-sidenav-link>
+	<mz-sidenav-divider></mz-sidenav-divider>
+	<mz-sidenav-link>
+		<a href="#" class="waves-effect">Second Link With Waves</a>
+	</mz-sidenav-link>
+</mz-sidenav>

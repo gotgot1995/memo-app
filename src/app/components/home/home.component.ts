@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as ngx from 'ngx-materialize';
 
 const LOREM = `Lorem ipsum dolor sit amet consectetur adipisicing elit.
 Magnam dicta aperiam tempore aut pariatur eum eius optio modi numquam omnis!`;
