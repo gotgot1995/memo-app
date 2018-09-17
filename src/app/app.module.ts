@@ -23,6 +23,8 @@ import { WebviewDirective } from './directives/webview.directive';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { CardComponent } from './components/card/card.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    CardComponent,
     HomeComponent,
     WebviewDirective
   ],
