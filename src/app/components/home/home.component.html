@@ -3,17 +3,14 @@
 	<div class="row">
 		<app-navbar></app-navbar>
 	</div>
-	
+
 	<!-- CONTENT -->
 	<main class="row">
-		<div class="col s12 m6 l3">
-			<app-card></app-card>
-		</div>
-		<div class="col s12 m6 l3">
-			<app-card></app-card>
-		</div>
+		<div class="col s12 m6 l3" *ngFor="let card of list">
+      <app-card [title]="card.title" [content]="card.content"></app-card>
+    </div>
 	</main>
-	
+
 	<!-- FOOTER -->
 </div>
 

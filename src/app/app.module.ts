@@ -1,3 +1,5 @@
+import { SettingsComponent } from './components/settings/settings.component';
+import { EditNoteComponent } from './components/edit-note/edit-note.component';
 import 'zone.js/dist/zone-mix';
 import 'reflect-metadata';
 import '../polyfills';
@@ -23,8 +25,9 @@ import { WebviewDirective } from './directives/webview.directive';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardComponent } from './components/card/card.component';
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,10 +37,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    WebviewDirective,
     NavbarComponent,
     CardComponent,
     HomeComponent,
-    WebviewDirective
+    EditNoteComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     MaterializeComponentModule.forRoot(),
   ],
-  providers: [ElectronService],
-  bootstrap: [AppComponent],
+  providers: [ ElectronService ],
+  bootstrap: [ AppComponent ],
   schemas : [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
