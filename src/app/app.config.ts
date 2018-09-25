@@ -1,5 +1,5 @@
 class AppConfig {
-  public static COLORS = {
+  public static COLOR_SCALES = {
     PURPLE: { primary: 'purple lighten-1', accent: 'purple lighten-3', dark: 'purple darken-2' },
     RED: { primary: 'red lighten-1', accent: 'red lighten-3', dark: 'red darken-4' },
     BLUE: { primary: 'blue', accent: 'blue lighten-3', dark: 'blue darken-4' },

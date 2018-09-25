@@ -7,7 +7,9 @@
 	<!-- CONTENT -->
 	<main class="row">
 		<div class="col s12 m6 l3" *ngFor="let card of list">
-      <app-card [title]="card.title" [content]="card.content"></app-card>
+      <app-card [title]="card.title" [content]="card.content"
+        [colorScale]="card.color" [action]="card.action"
+        [date]="card.date" [image]="card.image"></app-card>
     </div>
 	</main>
 
