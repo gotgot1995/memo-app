@@ -34,12 +34,18 @@ export class CardComponent implements OnInit {
   // color of the card footer (generated with given color scale)
   public actionColor: string[] = [];
 
+  // color of the card body (generated with given color scale)
+  public titleColor: string[] = [];
+
   constructor() { }
 
   ngOnInit() {
     if (this.colorScale) {
-      this.contentColor = AppConfig.COLOR_SCALES[this.colorScale].primary;
-      this.actionColor = AppConfig.COLOR_SCALES[this.colorScale].accent;
+      const selected_color = AppConfig.COLOR_SCALES[this.colorScale];
+
+      this.contentColor = selected_color.dark;
+      this.titleColor = selected_color.title;
+      this.actionColor = [ selected_color.primary, selected_color.body ];
     }
   }
 }
